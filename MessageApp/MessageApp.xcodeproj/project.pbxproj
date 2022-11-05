@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961B86622916D1D80053C29C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B86612916D1D80053C29C /* LoginScreen.swift */; };
 		96973E6F291590E800BB5AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96973E6E291590E800BB5AB3 /* AppDelegate.swift */; };
 		96973E71291590E800BB5AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96973E70291590E800BB5AB3 /* SceneDelegate.swift */; };
 		96973E73291590E800BB5AB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96973E72291590E800BB5AB3 /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		961B86612916D1D80053C29C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		96973E6B291590E800BB5AB3 /* MessageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96973E6E291590E800BB5AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96973E70291590E800BB5AB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		961B865E2916D19F0053C29C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				961B86602916D1B80053C29C /* Screen */,
+				961B865F2916D1AE0053C29C /* VC */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		961B865F2916D1AE0053C29C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				96973E72291590E800BB5AB3 /* ViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		961B86602916D1B80053C29C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				961B86612916D1D80053C29C /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		96973E62291590E800BB5AB3 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +81,9 @@
 		96973E6D291590E800BB5AB3 /* MessageApp */ = {
 			isa = PBXGroup;
 			children = (
+				961B865E2916D19F0053C29C /* Login */,
 				96973E6E291590E800BB5AB3 /* AppDelegate.swift */,
 				96973E70291590E800BB5AB3 /* SceneDelegate.swift */,
-				96973E72291590E800BB5AB3 /* ViewController.swift */,
 				96973E77291590E900BB5AB3 /* Assets.xcassets */,
 				96973E79291590E900BB5AB3 /* LaunchScreen.storyboard */,
 				96973E7C291590E900BB5AB3 /* Info.plist */,
@@ -135,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96973E73291590E800BB5AB3 /* ViewController.swift in Sources */,
+				961B86622916D1D80053C29C /* LoginScreen.swift in Sources */,
 				96973E6F291590E800BB5AB3 /* AppDelegate.swift in Sources */,
 				96973E71291590E800BB5AB3 /* SceneDelegate.swift in Sources */,
 			);
