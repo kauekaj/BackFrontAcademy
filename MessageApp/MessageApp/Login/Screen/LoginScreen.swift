@@ -7,7 +7,18 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func actionLoginButton()
+    func actionRegisterButton()
+}
+
 class LoginScreen: UIView {
+    
+    private weak var delegate: LoginScreenProtocol?
+    
+    func delegate(delegate: LoginScreenProtocol?) {
+        self.delegate = delegate
+    }
     
     lazy var loginLabel: UILabel = {
         let element = UILabel()
@@ -61,6 +72,7 @@ class LoginScreen: UIView {
         element.clipsToBounds = true
         element.layer.cornerRadius = 7.5
         element.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
+        element.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return element
     }()
     
@@ -70,6 +82,8 @@ class LoginScreen: UIView {
         element.setTitle("Näo tem conta? Cadastra-se", for: .normal)
         element.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         element.setTitleColor(.white, for: .normal)
+        element.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+
         return element
     }()
     
@@ -95,6 +109,21 @@ class LoginScreen: UIView {
         addSubview(passwordTextField)
         addSubview(loginButton)
         addSubview(registerButton)
+    }
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
+    
+    @objc
+    private func tappedLoginButton() {
+        self.delegate?.actionLoginButton()
+    }
+    
+    @objc
+    private func tappedRegisterButton() {
+        self.delegate?.actionRegisterButton()
     }
     
     private func setupConstraints() {
@@ -127,7 +156,6 @@ class LoginScreen: UIView {
             registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
             registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
-
         ])
     }
     

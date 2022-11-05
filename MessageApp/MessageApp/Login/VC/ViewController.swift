@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loginScreen?.delegate(delegate: self)
+        self.loginScreen?.configTextFieldDelegate(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,3 +29,22 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
+
+extension ViewController: LoginScreenProtocol {
+    func actionLoginButton() {
+        print("login ok")
+    }
+    
+    func actionRegisterButton() {
+        print("register ok")
+
+    }
+    
+    
+}
