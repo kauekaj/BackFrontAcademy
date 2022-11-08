@@ -9,9 +9,15 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
+    var registerScreen: RegisterScreen?
+    
+    override func loadView() {
+        registerScreen = RegisterScreen()
+        view = registerScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
     
 
