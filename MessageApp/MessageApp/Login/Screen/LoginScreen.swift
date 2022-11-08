@@ -42,6 +42,7 @@ class LoginScreen: UIView {
         let element = UITextField()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.autocorrectionType = .no
+        element.autocapitalizationType = .none
         element.backgroundColor = .white
         element.borderStyle = .roundedRect
         element.keyboardType = .emailAddress
