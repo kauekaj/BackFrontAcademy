@@ -100,7 +100,7 @@ class LoginScreen: UIView {
         configLoginButtonConstraints()
         configRegisterButtonConstraints()
         
-        setupConstraints()
+//        setupConstraints()
         configButtonEnable(false)
     }
     
@@ -160,33 +160,33 @@ class LoginScreen: UIView {
     private func setupConstraints() {
         
         NSLayoutConstraint.activate([
-//            loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-//            loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-//
-//            logoAppImageView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 20),
-//            logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-//            logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-//            logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
-//
-//            emailTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 20),
-//            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-//            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-//            emailTextField.heightAnchor.constraint(equalToConstant: 45),
-//
-//            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15),
-//            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
-//            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-//            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+
+            logoAppImageView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 20),
+            logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
+            logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
+            logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
+
+            emailTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 20),
+            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            emailTextField.heightAnchor.constraint(equalToConstant: 45),
+
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15),
+            passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
-//            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
-//            loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
-//            loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-//            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
+            loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
             
-//            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
-//            registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
-//            registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-//            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+            registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
+            registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
+            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
         ])
     }
     
