@@ -146,6 +146,14 @@ class RegisterScreen: UIView {
         }
     }
     
+    public func getEmail() -> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword() -> String {
+        return passwordTextField.text ?? ""
+    }
+    
     private func setupConstraints() {
         
         NSLayoutConstraint.activate([
