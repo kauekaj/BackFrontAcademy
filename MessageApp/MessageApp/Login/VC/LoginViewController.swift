@@ -21,10 +21,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loginScreen?.delegate(delegate: self)
-        self.loginScreen?.configTextFieldDelegate(delegate: self)
+        loginScreen?.delegate(delegate: self)
+        loginScreen?.configTextFieldDelegate(delegate: self)
         auth = Auth.auth()
-        self.alert = Alert(controller: self)
+        alert = Alert(controller: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
