@@ -17,6 +17,7 @@
 		96973E7B291590E900BB5AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96973E79291590E900BB5AB3 /* LaunchScreen.storyboard */; };
 		9699109D2922BF470096AB12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9699109C2922BF470096AB12 /* GoogleService-Info.plist */; };
 		96ACF1FC29197A5900394AA5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACF1FB29197A5900394AA5 /* RegisterViewController.swift */; };
+		96EDF68129296E0700449366 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF68029296E0700449366 /* HomeScreen.swift */; };
 		ADBE573AB4F9CE09E6E191E6 /* Pods_MessageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E9CD18FD92769A52BC1D7 /* Pods_MessageApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		96973E7C291590E900BB5AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9699109C2922BF470096AB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96ACF1FB29197A5900394AA5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		96EDF68029296E0700449366 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		DAA7F6CC636ED9AF62D3D559 /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		96973E6D291590E800BB5AB3 /* MessageApp */ = {
 			isa = PBXGroup;
 			children = (
+				96EDF67D29296DDA00449366 /* Home */,
 				969722D8292800D40089B039 /* Alert */,
 				96ACF1F8291979E500394AA5 /* Register */,
 				961B865E2916D19F0053C29C /* Login */,
@@ -146,6 +149,30 @@
 			isa = PBXGroup;
 			children = (
 				96ACF1FB29197A5900394AA5 /* RegisterViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		96EDF67D29296DDA00449366 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				96EDF67F29296DF000449366 /* VC */,
+				96EDF67E29296DE800449366 /* Screen */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		96EDF67E29296DE800449366 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				96EDF68029296E0700449366 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		96EDF67F29296DF000449366 /* VC */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -278,6 +305,7 @@
 				96973E73291590E800BB5AB3 /* LoginViewController.swift in Sources */,
 				96ACF1FC29197A5900394AA5 /* RegisterViewController.swift in Sources */,
 				961B86622916D1D80053C29C /* LoginScreen.swift in Sources */,
+				96EDF68129296E0700449366 /* HomeScreen.swift in Sources */,
 				96973E6F291590E800BB5AB3 /* AppDelegate.swift in Sources */,
 				96973E71291590E800BB5AB3 /* SceneDelegate.swift in Sources */,
 				969722DA292800EF0089B039 /* Alert.swift in Sources */,
