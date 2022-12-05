@@ -13,7 +13,7 @@ class HomeScreen: UIView {
         let element = UITableView()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.backgroundColor = .white
-        
+        element.register(UserDetailTableViewCell.self, forCellReuseIdentifier: UserDetailTableViewCell.identifier)
         return element
     }()
     
@@ -21,6 +21,7 @@ class HomeScreen: UIView {
         super.init(frame: frame)
         addSubView()
         setupConstraints()
+        configBackground()
     }
     
     required init?(coder: NSCoder) {
@@ -33,6 +34,9 @@ class HomeScreen: UIView {
         self.tableView.dataSource = dataSource
     }
     
+    private func configBackground() {
+        backgroundColor = UIColor(red: 24/255, green: 117/255, blue: 104/255, alpha: 1.0)
+    }
     
     func addSubView() {
         self.addSubview(tableView)
