@@ -47,19 +47,23 @@ extension LoginViewController: UITextFieldDelegate {
 extension LoginViewController: LoginScreenProtocol {
     func actionLoginButton() {
         
-        guard let login = loginScreen else { return }
+        let vc = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
         
-        auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
-            if error != nil {
-                self.alert?.getAlert(title: "Atençao", message: "Dados incorretos!")
-            } else {
-                if user == nil {
-                    self.alert?.getAlert(title: "Atençao", message: "Tivemos um problema inesperado. Tente novamente mais tarde.")
-                } else {
-                    self.alert?.getAlert(title: "Parabéns", message: "Login efetuado com sucesso!")
-                }
-            }
-        })
+        
+//        guard let login = loginScreen else { return }
+//
+//        auth?.signIn(withEmail: login.getEmail(), password: login.getPassword(), completion: { user, error in
+//            if error != nil {
+//                self.alert?.getAlert(title: "Atençao", message: "Dados incorretos!")
+//            } else {
+//                if user == nil {
+//                    self.alert?.getAlert(title: "Atençao", message: "Tivemos um problema inesperado. Tente novamente mais tarde.")
+//                } else {
+//                    self.alert?.getAlert(title: "Parabéns", message: "Login efetuado com sucesso!")
+//                }
+//            }
+//        })
         
     }
     
