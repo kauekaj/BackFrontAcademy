@@ -107,6 +107,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9696E0FD293E6C99000EE063 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				96973E6E291590E800BB5AB3 /* AppDelegate.swift */,
+				96973E70291590E800BB5AB3 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		969722D8292800D40089B039 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +149,7 @@
 				969722D8292800D40089B039 /* Alert */,
 				96ACF1F8291979E500394AA5 /* Register */,
 				961B865E2916D19F0053C29C /* Login */,
-				96973E6E291590E800BB5AB3 /* AppDelegate.swift */,
-				96973E70291590E800BB5AB3 /* SceneDelegate.swift */,
+				9696E0FD293E6C99000EE063 /* Delegate */,
 				96973E77291590E900BB5AB3 /* Assets.xcassets */,
 				96973E79291590E900BB5AB3 /* LaunchScreen.storyboard */,
 				96973E7C291590E900BB5AB3 /* Info.plist */,
