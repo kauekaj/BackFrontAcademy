@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		961B86622916D1D80053C29C /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B86612916D1D80053C29C /* LoginScreen.swift */; };
 		962ED723291A90D800A162F1 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962ED722291A90D800A162F1 /* RegisterScreen.swift */; };
+		96951E522948EB72003A5EF3 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96951E512948EB72003A5EF3 /* UserDetailView.swift */; };
 		9696E0F6293E5B64000EE063 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696E0F5293E5B64000EE063 /* HomeViewController.swift */; };
 		9696E0F9293E61EC000EE063 /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696E0F8293E61EC000EE063 /* UserDetailTableViewCell.swift */; };
 		9696E0FC293E67DA000EE063 /* DataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696E0FB293E67DA000EE063 /* DataUser.swift */; };
@@ -29,6 +30,7 @@
 		6F740194A99EE9CCE740A979 /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
 		961B86612916D1D80053C29C /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		962ED722291A90D800A162F1 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		96951E512948EB72003A5EF3 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		9696E0F5293E5B64000EE063 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9696E0F8293E61EC000EE063 /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		9696E0FB293E67DA000EE063 /* DataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUser.swift; sourceTree = "<group>"; };
@@ -91,9 +93,18 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		96951E502948EB27003A5EF3 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				96951E512948EB72003A5EF3 /* UserDetailView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		9696E0F7293E60A3000EE063 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				96951E502948EB27003A5EF3 /* CustomView */,
 				9696E0F8293E61EC000EE063 /* UserDetailTableViewCell.swift */,
 			);
 			path = Cell;
@@ -338,6 +349,7 @@
 				96973E73291590E800BB5AB3 /* LoginViewController.swift in Sources */,
 				96ACF1FC29197A5900394AA5 /* RegisterViewController.swift in Sources */,
 				961B86622916D1D80053C29C /* LoginScreen.swift in Sources */,
+				96951E522948EB72003A5EF3 /* UserDetailView.swift in Sources */,
 				9696E0FC293E67DA000EE063 /* DataUser.swift in Sources */,
 				96EDF68129296E0700449366 /* HomeScreen.swift in Sources */,
 				9696E0F9293E61EC000EE063 /* UserDetailTableViewCell.swift in Sources */,

@@ -11,25 +11,15 @@ class UserDetailTableViewCell: UITableViewCell {
     
     static let identifier = "UserDetailTableViewCell"
     
-    lazy var userImageView: UIImageView = {
-        let element = UIImageView()
-        element.translatesAutoresizingMaskIntoConstraints = false
-//        element.image = UIImage(named: "logo")
-        element.contentMode = .scaleAspectFit
-        return element
-    }()
-    
-    lazy var nameLabel: UILabel = {
-        let element = UILabel()
-        element.translatesAutoresizingMaskIntoConstraints = false
-        element.textColor = .black
+    lazy var userDetailView: UserDetailView = {
+        let element = UserDetailView()
         return element
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubView()
-        setupConstraints()
+        configConstraintsDescriptionCell()
     }
     
     required init?(coder: NSCoder) {
@@ -37,25 +27,17 @@ class UserDetailTableViewCell: UITableViewCell {
     }
     
     func addSubView() {
-        self.contentView.addSubview(userImageView)
-        self.contentView.addSubview(nameLabel)
+        self.contentView.addSubview(userDetailView)
     }
 
     public func setupCell(data: DataUser) {
-        self.nameLabel.text = data.name
-        self.userImageView.image = UIImage(named: data.nameImage)
+        self.userDetailView.nameLabel.text = data.name
+        self.userDetailView.userImageView.image = UIImage(named: data.nameImage)
     }
     
-    private func setupConstraints() {
-        
-        NSLayoutConstraint.activate([
-            userImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            userImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            userImageView.heightAnchor.constraint(equalToConstant: 80),
-            userImageView.widthAnchor.constraint(equalToConstant: 80),
-
-            nameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: self.userImageView.trailingAnchor, constant: 20),
-        ])
+    private func configConstraintsDescriptionCell() {
+        self.userDetailView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
 }
