@@ -11,7 +11,7 @@ class SportCollectionViewCell: UICollectionViewCell {
     
     static let identifier: String = "SportCollectionViewCell"
     
-    let sportCollectionViewCell: SportCollectionViewCellScreen = SportCollectionViewCellScreen()
+    let sportCollectionViewCellScreen: SportCollectionViewCellScreen = SportCollectionViewCellScreen()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,26 +19,34 @@ class SportCollectionViewCell: UICollectionViewCell {
         configConstraints()
     }
     
+    public func setupCell(data: Sport) {
+        self.sportCollectionViewCellScreen.imageView.image = UIImage(named: data.nameImage)
+        self.sportCollectionViewCellScreen.sportName.text = data.name
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func addSubView() {
-        sportCollectionViewCell.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(sportCollectionViewCell)
+        sportCollectionViewCellScreen.layer.borderWidth = 6.0
+        sportCollectionViewCellScreen.layer.borderColor = UIColor.blue.cgColor
+        
+        sportCollectionViewCellScreen.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(sportCollectionViewCellScreen)
     }
     
     func configConstraints() {
         NSLayoutConstraint.activate([
-            sportCollectionViewCell.topAnchor.constraint(equalTo: self.topAnchor),
-            sportCollectionViewCell.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            sportCollectionViewCell.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            sportCollectionViewCell.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            sportCollectionViewCellScreen.topAnchor.constraint(equalTo: self.topAnchor),
+            sportCollectionViewCellScreen.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            sportCollectionViewCellScreen.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            sportCollectionViewCellScreen.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
     
     func configConstraintsSportTableViewCellScreen() {
-        sportCollectionViewCell.snp.makeConstraints { make in
+        sportCollectionViewCellScreen.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

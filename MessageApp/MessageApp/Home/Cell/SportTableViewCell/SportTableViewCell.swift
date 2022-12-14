@@ -11,6 +11,8 @@ class SportTableViewCell: UITableViewCell {
 
     static let identifier = "SportTableViewCell"
     
+    var data: [Sport] = []
+    
     var sportTableViewCellScreen: SportTableViewCellScreen = SportTableViewCellScreen()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -43,16 +45,20 @@ class SportTableViewCell: UITableViewCell {
             make.edges.equalToSuperview()
         }
     }
+    
+    public func dataCollection(data: [Sport]) {
+        self.data = data
+    }
 }
 
 extension SportTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        self.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SportCollectionViewCell? = collectionView.dequeueReusableCell(withReuseIdentifier: SportCollectionViewCell.identifier, for: indexPath) as? SportCollectionViewCell
-        
+        cell?.setupCell(data: self.data[indexPath.row])
         return cell ?? UICollectionViewCell()
     }
     

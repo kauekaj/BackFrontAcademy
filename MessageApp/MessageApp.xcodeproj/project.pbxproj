@@ -21,6 +21,7 @@
 		96973E73291590E800BB5AB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96973E72291590E800BB5AB3 /* LoginViewController.swift */; };
 		96973E78291590E900BB5AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96973E77291590E900BB5AB3 /* Assets.xcassets */; };
 		96973E7B291590E900BB5AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96973E79291590E900BB5AB3 /* LaunchScreen.storyboard */; };
+		9697F718294A38B7007E7E0B /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F717294A38B7007E7E0B /* Sport.swift */; };
 		9699109D2922BF470096AB12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9699109C2922BF470096AB12 /* GoogleService-Info.plist */; };
 		96A58D392949FFE000ECA397 /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A58D382949FFE000ECA397 /* SportCollectionViewCell.swift */; };
 		96A58D3B294A000D00ECA397 /* SportCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A58D3A294A000D00ECA397 /* SportCollectionViewCellScreen.swift */; };
@@ -48,6 +49,7 @@
 		96973E77291590E900BB5AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96973E7A291590E900BB5AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96973E7C291590E900BB5AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9697F717294A38B7007E7E0B /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		9699109C2922BF470096AB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96A58D382949FFE000ECA397 /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
 		96A58D3A294A000D00ECA397 /* SportCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCellScreen.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				9696E0FB293E67DA000EE063 /* DataUser.swift */,
+				9697F717294A38B7007E7E0B /* Sport.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				96ACF1FC29197A5900394AA5 /* RegisterViewController.swift in Sources */,
 				96A58D392949FFE000ECA397 /* SportCollectionViewCell.swift in Sources */,
 				961B86622916D1D80053C29C /* LoginScreen.swift in Sources */,
+				9697F718294A38B7007E7E0B /* Sport.swift in Sources */,
 				96A58D3B294A000D00ECA397 /* SportCollectionViewCellScreen.swift in Sources */,
 				96951E522948EB72003A5EF3 /* UserDetailView.swift in Sources */,
 				9696E0FC293E67DA000EE063 /* DataUser.swift in Sources */,

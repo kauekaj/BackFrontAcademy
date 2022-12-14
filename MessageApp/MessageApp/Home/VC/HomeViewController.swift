@@ -11,11 +11,16 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var homeScreen: HomeScreen?
-    var data: [DataUser] = [DataUser(name: "Kaue", nameImage: "menino1"),
+    var dataUser: [DataUser] = [DataUser(name: "Kaue", nameImage: "menino1"),
                             DataUser(name: "Caio", nameImage: "menino2"),
                             DataUser(name: "Laura", nameImage: "menina1"),
                             ]
     
+    var dataSport: [Sport] = [Sport(name: "Corrida", nameImage: "corrida"),
+                              Sport(name: "Ciclismo", nameImage: "ciclismo"),
+                              Sport(name: "Natacao", nameImage: "natacao"),
+                              Sport(name: "Yoga", nameImage: "yoga"),
+                            ]
     
     override func loadView() {
         self.homeScreen = HomeScreen()
@@ -31,19 +36,20 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.data.count + 1
+        self.dataUser.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 3 {
             let cell: SportTableViewCell? = tableView.dequeueReusableCell(withIdentifier: SportTableViewCell.identifier, for: indexPath) as? SportTableViewCell
+            cell?.dataCollection(data: self.dataSport)
             return cell ?? UITableViewCell()
         }
         
         let cell: UserDetailTableViewCell? = tableView.dequeueReusableCell(withIdentifier: UserDetailTableViewCell.identifier, for: indexPath) as? UserDetailTableViewCell
         
-        cell?.setupCell(data: self.data[indexPath.row])
+        cell?.setupCell(data: self.dataUser[indexPath.row])
         
         return cell ?? UITableViewCell()
     }

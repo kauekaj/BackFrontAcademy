@@ -9,10 +9,18 @@ import UIKit
 
 class SportCollectionViewCellScreen: UIView {
 
-    lazy var backgroundView: UIView = {
-        let element = UIView()
+    lazy var imageView: UIImageView = {
+        let element = UIImageView()
         element.translatesAutoresizingMaskIntoConstraints = false
-        element.backgroundColor = .green
+        element.contentMode = .scaleAspectFit
+        return element
+    }()
+    
+    lazy var sportName: UILabel = {
+        let element = UILabel()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.textAlignment = .center
+        element.textColor = .darkGray
         return element
     }()
     
@@ -27,21 +35,23 @@ class SportCollectionViewCellScreen: UIView {
     }
     
     func addView() {
-        self.addSubview(self.backgroundView)
+        self.addSubview(imageView)
+        self.addSubview(sportName)
     }
 
     func configConstraints() {
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            imageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor,  constant: 10),
+            imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            imageView.bottomAnchor.constraint(equalTo: self.sportName.topAnchor, constant: -10),
+            
+            sportName.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            sportName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            sportName.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            sportName.heightAnchor.constraint(equalToConstant: 20)
+
         ])
     }
-    
-    func configConstraintsSportTableViewCellScreen() {
-        backgroundView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
+
 }
