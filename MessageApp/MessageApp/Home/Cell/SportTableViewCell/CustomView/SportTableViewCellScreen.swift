@@ -15,6 +15,7 @@ class SportTableViewCellScreen: UIView {
         element.showsHorizontalScrollIndicator = false
         element.backgroundColor = .red
         element.delaysContentTouches = false
+        element.register(SportCollectionViewCell.self, forCellWithReuseIdentifier: SportCollectionViewCell.identifier)
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
         element.setCollectionViewLayout(layout, animated: false)
@@ -29,6 +30,11 @@ class SportTableViewCellScreen: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func configProtocolsCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
+        self.collectionView.delegate = delegate
+        self.collectionView.dataSource = dataSource
     }
     
     func addSubView() {

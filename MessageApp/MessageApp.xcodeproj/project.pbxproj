@@ -22,6 +22,8 @@
 		96973E78291590E900BB5AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96973E77291590E900BB5AB3 /* Assets.xcassets */; };
 		96973E7B291590E900BB5AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96973E79291590E900BB5AB3 /* LaunchScreen.storyboard */; };
 		9699109D2922BF470096AB12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9699109C2922BF470096AB12 /* GoogleService-Info.plist */; };
+		96A58D392949FFE000ECA397 /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A58D382949FFE000ECA397 /* SportCollectionViewCell.swift */; };
+		96A58D3B294A000D00ECA397 /* SportCollectionViewCellScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A58D3A294A000D00ECA397 /* SportCollectionViewCellScreen.swift */; };
 		96ACF1FC29197A5900394AA5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96ACF1FB29197A5900394AA5 /* RegisterViewController.swift */; };
 		96EDF68129296E0700449366 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EDF68029296E0700449366 /* HomeScreen.swift */; };
 		ADBE573AB4F9CE09E6E191E6 /* Pods_MessageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063E9CD18FD92769A52BC1D7 /* Pods_MessageApp.framework */; };
@@ -47,6 +49,8 @@
 		96973E7A291590E900BB5AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96973E7C291590E900BB5AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9699109C2922BF470096AB12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		96A58D382949FFE000ECA397 /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
+		96A58D3A294A000D00ECA397 /* SportCollectionViewCellScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCellScreen.swift; sourceTree = "<group>"; };
 		96ACF1FB29197A5900394AA5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		96EDF68029296E0700449366 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		DAA7F6CC636ED9AF62D3D559 /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 		96951E542948F771003A5EF3 /* SportTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				96A58D372949FFA800ECA397 /* CollectionViewCell */,
 				96951E572948F852003A5EF3 /* CustomView */,
 				96951E552948F796003A5EF3 /* SportTableViewCell.swift */,
 			);
@@ -197,6 +202,23 @@
 				9699109C2922BF470096AB12 /* GoogleService-Info.plist */,
 			);
 			path = MessageApp;
+			sourceTree = "<group>";
+		};
+		96A58D372949FFA800ECA397 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				96A58D382949FFE000ECA397 /* SportCollectionViewCell.swift */,
+				96A58D3C294A001800ECA397 /* CollectionCustomView */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		96A58D3C294A001800ECA397 /* CollectionCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				96A58D3A294A000D00ECA397 /* SportCollectionViewCellScreen.swift */,
+			);
+			path = CollectionCustomView;
 			sourceTree = "<group>";
 		};
 		96ACF1F8291979E500394AA5 /* Register */ = {
@@ -378,7 +400,9 @@
 				962ED723291A90D800A162F1 /* RegisterScreen.swift in Sources */,
 				96973E73291590E800BB5AB3 /* LoginViewController.swift in Sources */,
 				96ACF1FC29197A5900394AA5 /* RegisterViewController.swift in Sources */,
+				96A58D392949FFE000ECA397 /* SportCollectionViewCell.swift in Sources */,
 				961B86622916D1D80053C29C /* LoginScreen.swift in Sources */,
+				96A58D3B294A000D00ECA397 /* SportCollectionViewCellScreen.swift in Sources */,
 				96951E522948EB72003A5EF3 /* UserDetailView.swift in Sources */,
 				9696E0FC293E67DA000EE063 /* DataUser.swift in Sources */,
 				96951E592948F88B003A5EF3 /* SportTableViewCellScreen.swift in Sources */,
