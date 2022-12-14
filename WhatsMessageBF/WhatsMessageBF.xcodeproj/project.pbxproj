@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962FDA4C294A4F3A008D8D98 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962FDA4B294A4F3A008D8D98 /* TestFile.swift */; };
 		9697F726294A41BE007E7E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F725294A41BE007E7E0B /* AppDelegate.swift */; };
 		9697F728294A41BE007E7E0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F727294A41BE007E7E0B /* SceneDelegate.swift */; };
 		9697F72F294A41BE007E7E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9697F72E294A41BE007E7E0B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		09C7756C0F41E633B70C024D /* Pods-WhatsMessageBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMessageBF.debug.xcconfig"; path = "Target Support Files/Pods-WhatsMessageBF/Pods-WhatsMessageBF.debug.xcconfig"; sourceTree = "<group>"; };
 		4476D484DE1667976AED9FE5 /* Pods-WhatsMessageBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMessageBF.release.xcconfig"; path = "Target Support Files/Pods-WhatsMessageBF/Pods-WhatsMessageBF.release.xcconfig"; sourceTree = "<group>"; };
+		962FDA4B294A4F3A008D8D98 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		9697F722294A41BE007E7E0B /* WhatsMessageBF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsMessageBF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9697F725294A41BE007E7E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9697F727294A41BE007E7E0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		9697F719294A41BE007E7E0B = {
 			isa = PBXGroup;
 			children = (
+				962FDA4B294A4F3A008D8D98 /* TestFile.swift */,
 				9697F724294A41BE007E7E0B /* WhatsMessageBF */,
 				9697F723294A41BE007E7E0B /* Products */,
 				B966F8793843B9023716BB67 /* Pods */,
@@ -164,7 +167,6 @@
 				09C7756C0F41E633B70C024D /* Pods-WhatsMessageBF.debug.xcconfig */,
 				4476D484DE1667976AED9FE5 /* Pods-WhatsMessageBF.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -283,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9697F743294A42A8007E7E0B /* LoginViewController.swift in Sources */,
+				962FDA4C294A4F3A008D8D98 /* TestFile.swift in Sources */,
 				9697F726294A41BE007E7E0B /* AppDelegate.swift in Sources */,
 				9697F746294A42A8007E7E0B /* RegisterScreen.swift in Sources */,
 				9697F745294A42A8007E7E0B /* RegisterViewController.swift in Sources */,
