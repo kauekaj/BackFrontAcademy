@@ -84,13 +84,7 @@ class RegisterScreen: UIView {
         configBackground()
         configSuperView()
         
-        configAddUserImageViewConstraints()
-        configBackButtonConstraints()
-        configEmailTextFieldConstraints()
-        configPasswordTextFieldConstraints()
-        configRegisterButtonConstraints()
-        
-//        setupConstraints()
+        setupConstraints()
         configButtonEnable(false)
     }
     
@@ -183,45 +177,4 @@ class RegisterScreen: UIView {
         ])
     }
     
-    func configAddUserImageViewConstraints() {
-        addUserImageView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top).offset(20)
-            make.centerX.equalToSuperview()
-            make.width.height.equalTo(150)
-        }
-    }
-    
-    func configBackButtonConstraints() {
-        backButton.snp.makeConstraints { make in
-            make.top.equalTo(addUserImageView.snp.top)
-            make.leading.equalToSuperview().offset(20)
-        }
-    }
-    
-    func configEmailTextFieldConstraints() {
-        emailTextField.snp.makeConstraints { make in
-            make.top.equalTo(addUserImageView.snp.bottom).offset(10)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().inset(20)
-            make.height.equalTo(45)
-        }
-    }
-    
-    func configPasswordTextFieldConstraints() {
-        passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(emailTextField.snp.bottom).offset(15)
-            make.leading.equalTo(emailTextField.snp.leading)
-            make.trailing.equalTo(emailTextField.snp.trailing)
-            make.height.equalTo(emailTextField.snp.height)
-        }
-    }
-    
-    func configRegisterButtonConstraints() {
-        registerButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(15)
-            make.leading.equalTo(emailTextField.snp.leading)
-            make.trailing.equalTo(emailTextField.snp.trailing)
-            make.height.equalTo(emailTextField.snp.height)
-        }
-    }
 }
