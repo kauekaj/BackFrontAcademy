@@ -81,9 +81,9 @@ class NavigationView: UIView {
     lazy var conversationButton: UIButton = {
         let element = UIButton()
         element.translatesAutoresizingMaskIntoConstraints = false
-        element.setImage(UIImage(named: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        element.setImage(UIImage(systemName: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
         element.tintColor = .systemPink
-        element.addTarget(self, action: #selector(tappedConversation), for: .touchDragInside)
+        element.addTarget(self, action: #selector(tappedConversationButton), for: .touchUpInside)
         return element
     }()
     
@@ -92,19 +92,19 @@ class NavigationView: UIView {
         element.translatesAutoresizingMaskIntoConstraints = false
         element.setImage(UIImage(named: "group")?.withRenderingMode(.alwaysTemplate), for: .normal)
         element.tintColor = .systemPink
-        element.addTarget(self, action: #selector(tappedContact), for: .touchDragInside)
+        element.addTarget(self, action: #selector(tappedContactButton), for: .touchUpInside)
         return element
     }()
     
     @objc
-    func tappedConversation() {
+    func tappedConversationButton() {
         self.conversationButton.tintColor = .systemPink
         self.contactButton.tintColor = .black
         self.delegate?.typeScreenMessage(type: .conversation)
     }
     
     @objc
-    func tappedContact() {
+    func tappedContactButton() {
         self.conversationButton.tintColor = .black
         self.contactButton.tintColor = .systemPink
         self.delegate?.typeScreenMessage(type: .contact)
@@ -112,7 +112,7 @@ class NavigationView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addView()
+        setupView()
         setupConstraints()
     }
     
@@ -120,7 +120,7 @@ class NavigationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addView() {
+    func setupView() {
         self.addSubview(navigationBackgroundView)
         self.navigationBackgroundView.addSubview(navigationBar)
         self.navigationBar.addSubview(searchBar)
@@ -149,7 +149,7 @@ class NavigationView: UIView {
 
             searchBar.leadingAnchor.constraint(equalTo: self.navigationBar.leadingAnchor, constant: 30),
             searchBar.centerYAnchor.constraint(equalTo: self.navigationBar.centerYAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: self.navigationBar.leadingAnchor, constant: -20),
+            searchBar.trailingAnchor.constraint(equalTo: self.stackView.leadingAnchor, constant: -20),
             searchBar.heightAnchor.constraint(equalToConstant: 55),
             
             stackView.trailingAnchor.constraint(equalTo: self.navigationBar.trailingAnchor, constant: -30),

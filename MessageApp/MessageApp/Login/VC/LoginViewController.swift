@@ -56,7 +56,11 @@ extension LoginViewController: LoginScreenProtocol {
                 if user == nil {
                     self.alert?.getAlert(title: "Atençao", message: "Tivemos um problema inesperado. Tente novamente mais tarde.")
                 } else {
-                    self.alert?.getAlert(title: "Parabéns", message: "Login efetuado com sucesso!")
+//                    self.alert?.getAlert(title: "Parabéns", message: "Login efetuado com sucesso!")
+                    let VC = HomeViewController()
+                    let navVC = UINavigationController(rootViewController: VC)
+                    navVC.modalPresentationStyle = .fullScreen
+                    self.present(navVC, animated: true, completion: nil)
                 }
             }
         })
