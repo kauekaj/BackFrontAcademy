@@ -1,40 +1,53 @@
 //
-//  LoginScreen.swift
+//  RegisterScreen.swift
 //  MessageApp
 //
-//  Created by Kaue de Assis Jacyntho on 05/11/22.
+//  Created by Kaue de Assis Jacyntho on 08/11/22.
 //
 
 import UIKit
 
-protocol LoginScreenProtocol: AnyObject {
-    func actionLoginButton()
+protocol RegisterScreenProtocol: AnyObject {
+    func actionBackButton()
     func actionRegisterButton()
 }
 
-class LoginScreen: UIView {
+class RegisterScreen: UIView {
     
-    private weak var delegate: LoginScreenProtocol?
+    weak private var delegate: RegisterScreenProtocol?
     
-    func delegate(delegate: LoginScreenProtocol?) {
+    func delegate(delegate: RegisterScreenProtocol?) {
         self.delegate = delegate
     }
     
-    lazy var loginLabel: UILabel = {
-        let element = UILabel()
+    
+    lazy var backButton: UIButton = {
+        let element = UIButton()
         element.translatesAutoresizingMaskIntoConstraints = false
-        element.textColor = .white
-        element.font = UIFont.boldSystemFont(ofSize: 40)
-        element.text = "Login"
+        element.setImage(UIImage(named: "back"), for: .normal)
+        element.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
         return element
     }()
     
-    lazy var logoAppImageView: UIImageView = {
+    lazy var addUserImageView: UIImageView = {
         let element = UIImageView()
         element.translatesAutoresizingMaskIntoConstraints = false
-        element.image = UIImage(named: "logo")
-        element.tintColor = .green
+        element.image = UIImage(named: "usuario")
         element.contentMode = .scaleAspectFit
+        return element
+    }()
+    
+    lazy var nameTextField: UITextField = {
+        let element = UITextField()
+        element.translatesAutoresizingMaskIntoConstraints = false
+        element.autocorrectionType = .no
+        element.autocapitalizationType = .none
+        element.backgroundColor = .white
+        element.borderStyle = .roundedRect
+        element.keyboardType = .emailAddress
+        element.placeholder = "Digite seu Nome"
+        element.font = UIFont.systemFont(ofSize: 14)
+        element.textColor = .darkGray
         return element
     }()
     
@@ -47,7 +60,7 @@ class LoginScreen: UIView {
         element.borderStyle = .roundedRect
         element.keyboardType = .emailAddress
         element.placeholder = "Digite seu Email"
-        element.text = "k@gmail.com"
+        element.font = UIFont.systemFont(ofSize: 14)
         element.textColor = .darkGray
         return element
     }()
@@ -56,37 +69,27 @@ class LoginScreen: UIView {
         let element = UITextField()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.autocorrectionType = .no
+        element.autocapitalizationType = .none
         element.backgroundColor = .white
         element.borderStyle = .roundedRect
         element.keyboardType = .default
-        element.isSecureTextEntry = true
         element.placeholder = "Digite sua senha"
-        element.text = "111111"
+        element.isSecureTextEntry = true
+        element.font = UIFont.systemFont(ofSize: 14)
         element.textColor = .darkGray
-        return element
-    }()
-    
-    lazy var loginButton: UIButton = {
-        let element = UIButton()
-        element.translatesAutoresizingMaskIntoConstraints = false
-        element.setTitle("Logar", for: .normal)
-        element.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        element.setTitleColor(.white, for: .normal)
-        element.clipsToBounds = true
-        element.layer.cornerRadius = 7.5
-        element.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
-        element.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return element
     }()
     
     lazy var registerButton: UIButton = {
         let element = UIButton()
         element.translatesAutoresizingMaskIntoConstraints = false
-        element.setTitle("Näo tem conta? Cadastra-se", for: .normal)
+        element.setTitle("Cadastar", for: .normal)
         element.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         element.setTitleColor(.white, for: .normal)
+        element.clipsToBounds = true
+        element.layer.cornerRadius = 7.5
+        element.backgroundColor = UIColor(red: 3/255, green: 58/255, blue: 51/255, alpha: 1.0)
         element.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
-
         return element
     }()
     
@@ -108,34 +111,36 @@ class LoginScreen: UIView {
     }
     
     private func configSuperView() {
-        addSubview(loginLabel)
-        addSubview(logoAppImageView)
+        addSubview(backButton)
+        addSubview(addUserImageView)
+        addSubview(nameTextField)
         addSubview(emailTextField)
         addSubview(passwordTextField)
-        addSubview(loginButton)
         addSubview(registerButton)
     }
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.nameTextField.delegate = delegate
         self.emailTextField.delegate = delegate
         self.passwordTextField.delegate = delegate
     }
     
     @objc
-    private func tappedLoginButton() {
-        self.delegate?.actionLoginButton()
+    private func tappedBackButton() {
+        delegate?.actionBackButton()
     }
     
     @objc
     private func tappedRegisterButton() {
-        self.delegate?.actionRegisterButton()
+        delegate?.actionRegisterButton()
     }
     
     public func validateTextfields() {
+        let name: String = nameTextField.text ?? ""
         let email: String = emailTextField.text ?? ""
         let passaword: String = passwordTextField.text ?? ""
         
-        if !email.isEmpty && !passaword.isEmpty {
+        if !name.isEmpty && !email.isEmpty && !passaword.isEmpty {
             configButtonEnable(true)
         } else {
             configButtonEnable(false)
@@ -144,12 +149,16 @@ class LoginScreen: UIView {
     
     private func configButtonEnable(_ enable: Bool) {
         if enable {
-            loginButton.setTitleColor(.white, for: .normal)
-            loginButton.isEnabled = true
+            registerButton.setTitleColor(.white, for: .normal)
+            registerButton.isEnabled = true
         } else {
-            loginButton.setTitleColor(.lightGray, for: .normal)
-            loginButton.isEnabled = false
+            registerButton.setTitleColor(.lightGray, for: .normal)
+            registerButton.isEnabled = false
         }
+    }
+    
+    public func getName() -> String {
+        return nameTextField.text ?? ""
     }
     
     public func getEmail() -> String {
@@ -163,33 +172,34 @@ class LoginScreen: UIView {
     private func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            loginLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            addUserImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            addUserImageView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            addUserImageView.widthAnchor.constraint(equalToConstant: 150),
+            addUserImageView.heightAnchor.constraint(equalToConstant: 150),
 
-            logoAppImageView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 20),
-            logoAppImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60),
-            logoAppImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60),
-            logoAppImageView.heightAnchor.constraint(equalToConstant: 200),
+            backButton.topAnchor.constraint(equalTo: addUserImageView.topAnchor),
+            backButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
 
-            emailTextField.topAnchor.constraint(equalTo: logoAppImageView.bottomAnchor, constant: 20),
-            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            nameTextField.topAnchor.constraint(equalTo: addUserImageView.bottomAnchor, constant: 10),
+            nameTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            nameTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            nameTextField.heightAnchor.constraint(equalToConstant: 45),
+            
+            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 15),
+            emailTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            emailTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
             emailTextField.heightAnchor.constraint(equalToConstant: 45),
 
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 15),
             passwordTextField.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
-            
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
-            loginButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
-            loginButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
-            
-            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 45),
+
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
             registerButton.leadingAnchor.constraint(equalTo: emailTextField.leadingAnchor),
             registerButton.trailingAnchor.constraint(equalTo: emailTextField.trailingAnchor),
-            registerButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor),
+            registerButton.heightAnchor.constraint(equalToConstant: 45),
+            
         ])
     }
     
