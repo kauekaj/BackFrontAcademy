@@ -171,8 +171,7 @@
 				9697F73A294A42A8007E7E0B /* VC */,
 				9697F73C294A42A8007E7E0B /* Screen */,
 			);
-			name = Login;
-			path = ../../MessageApp/MessageApp/Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		9697F73A294A42A8007E7E0B /* VC */ = {
@@ -197,8 +196,7 @@
 				9697F73F294A42A8007E7E0B /* VC */,
 				9697F741294A42A8007E7E0B /* Screen */,
 			);
-			name = Register;
-			path = ../../MessageApp/MessageApp/Register;
+			path = Register;
 			sourceTree = "<group>";
 		};
 		9697F73F294A42A8007E7E0B /* VC */ = {
@@ -231,8 +229,7 @@
 			children = (
 				9697F749294A436F007E7E0B /* Alert.swift */,
 			);
-			name = Alert;
-			path = ../../MessageApp/MessageApp/Alert;
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		96C900C1294A76D500491495 /* Fonts */ = {
