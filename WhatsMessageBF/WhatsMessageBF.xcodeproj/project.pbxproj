@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		962FDA4E294A51B4008D8D98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 962FDA4D294A51B4008D8D98 /* GoogleService-Info.plist */; };
+		9696DF58294B5B09004C541C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696DF57294B5B09004C541C /* HomeViewController.swift */; };
+		9696DF5B294B5B77004C541C /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696DF5A294B5B77004C541C /* HomeScreen.swift */; };
+		9696DF5E294B5C12004C541C /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696DF5D294B5C12004C541C /* NavigationView.swift */; };
 		9697F726294A41BE007E7E0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F725294A41BE007E7E0B /* AppDelegate.swift */; };
 		9697F728294A41BE007E7E0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F727294A41BE007E7E0B /* SceneDelegate.swift */; };
 		9697F72F294A41BE007E7E0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9697F72E294A41BE007E7E0B /* Assets.xcassets */; };
@@ -17,6 +20,15 @@
 		9697F745294A42A8007E7E0B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F740294A42A8007E7E0B /* RegisterViewController.swift */; };
 		9697F746294A42A8007E7E0B /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F742294A42A8007E7E0B /* RegisterScreen.swift */; };
 		9697F74A294A436F007E7E0B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F749294A436F007E7E0B /* Alert.swift */; };
+		96C900BA294A741200491495 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900B9294A741200491495 /* UIView+Extension.swift */; };
+		96C900BE294A752600491495 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900BD294A752600491495 /* CustomColor.swift */; };
+		96C900C0294A75CB00491495 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900BF294A75CB00491495 /* CustomFont.swift */; };
+		96C900C3294A76EF00491495 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96C900C2294A76EF00491495 /* Poppins-Bold.ttf */; };
+		96C900C5294A76FB00491495 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96C900C4294A76FB00491495 /* Poppins-SemiBold.ttf */; };
+		96C900C7294A771300491495 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96C900C6294A771300491495 /* Poppins-Regular.ttf */; };
+		96C900C9294A77BD00491495 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900C8294A77BD00491495 /* UIButton+Extension.swift */; };
+		96C900CB294A791A00491495 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900CA294A791A00491495 /* String+Extension.swift */; };
+		96C900CE294A7AD800491495 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96C900CD294A7AD800491495 /* send.wav */; };
 		F56FB73E1B69870B27C65454 /* Pods_WhatsMessageBF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4985C9232E7BCC308084BE /* Pods_WhatsMessageBF.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +36,9 @@
 		09C7756C0F41E633B70C024D /* Pods-WhatsMessageBF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMessageBF.debug.xcconfig"; path = "Target Support Files/Pods-WhatsMessageBF/Pods-WhatsMessageBF.debug.xcconfig"; sourceTree = "<group>"; };
 		4476D484DE1667976AED9FE5 /* Pods-WhatsMessageBF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsMessageBF.release.xcconfig"; path = "Target Support Files/Pods-WhatsMessageBF/Pods-WhatsMessageBF.release.xcconfig"; sourceTree = "<group>"; };
 		962FDA4D294A51B4008D8D98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9696DF57294B5B09004C541C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9696DF5A294B5B77004C541C /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		9696DF5D294B5C12004C541C /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		9697F722294A41BE007E7E0B /* WhatsMessageBF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsMessageBF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9697F725294A41BE007E7E0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9697F727294A41BE007E7E0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +50,15 @@
 		9697F740294A42A8007E7E0B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9697F742294A42A8007E7E0B /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		9697F749294A436F007E7E0B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		96C900B9294A741200491495 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		96C900BD294A752600491495 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		96C900BF294A75CB00491495 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		96C900C2294A76EF00491495 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		96C900C4294A76FB00491495 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		96C900C6294A771300491495 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		96C900C8294A77BD00491495 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		96C900CA294A791A00491495 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		96C900CD294A7AD800491495 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
 		FE4985C9232E7BCC308084BE /* Pods_WhatsMessageBF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsMessageBF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,8 +93,39 @@
 		962FDA50294A573F008D8D98 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				96C900B9294A741200491495 /* UIView+Extension.swift */,
+				96C900BD294A752600491495 /* CustomColor.swift */,
+				96C900BF294A75CB00491495 /* CustomFont.swift */,
+				96C900C8294A77BD00491495 /* UIButton+Extension.swift */,
+				96C900CA294A791A00491495 /* String+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		9696DF56294B5ADE004C541C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9696DF5C294B5BF0004C541C /* NavigationView */,
+				9696DF59294B5B5C004C541C /* Screen */,
+				9696DF57294B5B09004C541C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9696DF59294B5B5C004C541C /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				9696DF5A294B5B77004C541C /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		9696DF5C294B5BF0004C541C /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				9696DF5D294B5C12004C541C /* NavigationView.swift */,
+			);
+			path = NavigationView;
 			sourceTree = "<group>";
 		};
 		9697F719294A41BE007E7E0B = {
@@ -94,10 +149,13 @@
 		9697F724294A41BE007E7E0B /* WhatsMessageBF */ = {
 			isa = PBXGroup;
 			children = (
+				96C900CC294A7AC500491495 /* Sound */,
 				962FDA50294A573F008D8D98 /* Utils */,
 				9697F748294A436F007E7E0B /* Alert */,
+				9696DF56294B5ADE004C541C /* Home */,
 				9697F739294A42A8007E7E0B /* Login */,
 				9697F73E294A42A8007E7E0B /* Register */,
+				96C900C1294A76D500491495 /* Fonts */,
 				962FDA4F294A570C008D8D98 /* Resources */,
 				9697F747294A42E0007E7E0B /* Delegate */,
 				9697F730294A41BE007E7E0B /* LaunchScreen.storyboard */,
@@ -177,6 +235,24 @@
 			path = ../../MessageApp/MessageApp/Alert;
 			sourceTree = "<group>";
 		};
+		96C900C1294A76D500491495 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				96C900C2294A76EF00491495 /* Poppins-Bold.ttf */,
+				96C900C4294A76FB00491495 /* Poppins-SemiBold.ttf */,
+				96C900C6294A771300491495 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		96C900CC294A7AC500491495 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				96C900CD294A7AD800491495 /* send.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		B966F8793843B9023716BB67 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,9 +322,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C900C5294A76FB00491495 /* Poppins-SemiBold.ttf in Resources */,
 				9697F732294A41BE007E7E0B /* LaunchScreen.storyboard in Resources */,
 				9697F72F294A41BE007E7E0B /* Assets.xcassets in Resources */,
+				96C900C7294A771300491495 /* Poppins-Regular.ttf in Resources */,
 				962FDA4E294A51B4008D8D98 /* GoogleService-Info.plist in Resources */,
+				96C900CE294A7AD800491495 /* send.wav in Resources */,
+				96C900C3294A76EF00491495 /* Poppins-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +383,18 @@
 			files = (
 				9697F743294A42A8007E7E0B /* LoginViewController.swift in Sources */,
 				9697F726294A41BE007E7E0B /* AppDelegate.swift in Sources */,
+				9696DF5B294B5B77004C541C /* HomeScreen.swift in Sources */,
+				96C900BE294A752600491495 /* CustomColor.swift in Sources */,
+				96C900C9294A77BD00491495 /* UIButton+Extension.swift in Sources */,
+				96C900CB294A791A00491495 /* String+Extension.swift in Sources */,
+				96C900BA294A741200491495 /* UIView+Extension.swift in Sources */,
+				9696DF5E294B5C12004C541C /* NavigationView.swift in Sources */,
 				9697F746294A42A8007E7E0B /* RegisterScreen.swift in Sources */,
+				96C900C0294A75CB00491495 /* CustomFont.swift in Sources */,
 				9697F745294A42A8007E7E0B /* RegisterViewController.swift in Sources */,
 				9697F728294A41BE007E7E0B /* SceneDelegate.swift in Sources */,
 				9697F744294A42A8007E7E0B /* LoginScreen.swift in Sources */,
+				9696DF58294B5B09004C541C /* HomeViewController.swift in Sources */,
 				9697F74A294A436F007E7E0B /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
