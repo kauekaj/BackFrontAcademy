@@ -25,7 +25,7 @@ class LoginScreen: UIView {
         element.translatesAutoresizingMaskIntoConstraints = false
         element.textColor = .white
         element.font = UIFont.boldSystemFont(ofSize: 40)
-        element.text = "Login"
+        element.text = "Mess@ging"
         return element
     }()
     

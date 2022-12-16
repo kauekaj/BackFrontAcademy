@@ -20,6 +20,7 @@
 		9697F745294A42A8007E7E0B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F740294A42A8007E7E0B /* RegisterViewController.swift */; };
 		9697F746294A42A8007E7E0B /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F742294A42A8007E7E0B /* RegisterScreen.swift */; };
 		9697F74A294A436F007E7E0B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9697F749294A436F007E7E0B /* Alert.swift */; };
+		969E7E84294BC953009A497E /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E7E83294BC953009A497E /* MessageAllModel.swift */; };
 		96C900BA294A741200491495 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900B9294A741200491495 /* UIView+Extension.swift */; };
 		96C900BE294A752600491495 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900BD294A752600491495 /* CustomColor.swift */; };
 		96C900C0294A75CB00491495 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900BF294A75CB00491495 /* CustomFont.swift */; };
@@ -50,6 +51,7 @@
 		9697F740294A42A8007E7E0B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9697F742294A42A8007E7E0B /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		9697F749294A436F007E7E0B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		969E7E83294BC953009A497E /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
 		96C900B9294A741200491495 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		96C900BD294A752600491495 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		96C900BF294A75CB00491495 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		9697F724294A41BE007E7E0B /* WhatsMessageBF */ = {
 			isa = PBXGroup;
 			children = (
+				969E7E82294BC940009A497E /* Model */,
 				96C900CC294A7AC500491495 /* Sound */,
 				962FDA50294A573F008D8D98 /* Utils */,
 				9697F748294A436F007E7E0B /* Alert */,
@@ -230,6 +233,14 @@
 				9697F749294A436F007E7E0B /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		969E7E82294BC940009A497E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				969E7E83294BC953009A497E /* MessageAllModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		96C900C1294A76D500491495 /* Fonts */ = {
@@ -393,6 +404,7 @@
 				9697F744294A42A8007E7E0B /* LoginScreen.swift in Sources */,
 				9696DF58294B5B09004C541C /* HomeViewController.swift in Sources */,
 				9697F74A294A436F007E7E0B /* Alert.swift in Sources */,
+				969E7E84294BC953009A497E /* MessageAllModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
