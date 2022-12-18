@@ -35,6 +35,25 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
         setupConstraints()
     }
     
+    func setupView() {
+        self.addSubview(imageView)
+        self.addSubview(userName)
+    }
+    
+    private func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            imageView.widthAnchor.constraint(equalToConstant: 55),
+            imageView.heightAnchor.constraint(equalToConstant: 55),
+            
+            userName.leadingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: 15),
+            userName.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            userName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+        ])
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -50,6 +69,8 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
     func setUserName(userName: String) {
         let attributedtext = NSMutableAttributedString(string: userName, attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.darkGray])
         self.userName.attributedText = attributedtext
+        
+//        self.userName.text = userName
     }
     
     func setUserNameAttributedtext(_ conversation: Conversation) {
@@ -60,24 +81,5 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
         self.userName.attributedText = attributedtext
     }
     
-    func setupView() {
-        self.addSubview(imageView)
-        self.addSubview(userName)
-    }
-    
-    private func setupConstraints() {
-        
-        NSLayoutConstraint.activate([
-            
-            imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            imageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            imageView.widthAnchor.constraint(equalToConstant: 55),
-            imageView.heightAnchor.constraint(equalToConstant: 55),
-            
-            userName.leadingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: 15),
-            userName.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            userName.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
-
-        ])
-    }
+   
 }

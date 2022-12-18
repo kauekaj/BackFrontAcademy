@@ -32,11 +32,11 @@ class ContactController {
         
         //Check if user exists in Firebase
         let firestore = Firestore.firestore()
-        firestore.collection("users").whereField("email", isEqualTo: email).getDocuments { snapshotresult, error in
+        firestore.collection("users").whereField("email", isEqualTo: email).getDocuments { snapshotResult, error in
             
             
             //check account
-            if let totalItens = snapshotresult?.count {
+            if let totalItens = snapshotResult?.count {
                 if totalItens == 0 {
                     self.delegate?.alertStateError(title: "Usuario nao cadastrado", message: "Adicione um email diferente")
                     return
@@ -44,7 +44,7 @@ class ContactController {
             }
             
             //save contact
-            if let snapshot = snapshotresult {
+            if let snapshot = snapshotResult {
                 for document in snapshot.documents {
                     let data = document.data()
                     self.saveContact(contactData: data, userID: userID)

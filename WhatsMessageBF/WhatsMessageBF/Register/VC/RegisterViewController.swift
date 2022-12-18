@@ -61,7 +61,7 @@ extension RegisterViewController: RegisterScreenProtocol {
                 
                 if let userId = result?.user.uid {
                     self.firestore?.collection("users").document(userId).setData([
-                        "nome:": self.registerScreen?.getName() ?? "",
+                        "name": self.registerScreen?.getName() ?? "",
                         "email": self.registerScreen?.getEmail() ?? "",
                         "id": userId
                     ])
