@@ -8,7 +8,17 @@
 import UIKit
 import AVFoundation
 
+protocol ChatViewScreenProtocol: AnyObject {
+    func actionPushMessage()
+}
+
 class ChatViewScreen: UIView {
+    
+    weak private var delegate: ChatViewScreenProtocol?
+    
+    public func delegate(delegate:ChatViewScreenProtocol?){
+        self.delegate = delegate
+    }
     
     var bottomConstraint: NSLayoutConstraint?
     var player: AVAudioPlayer?
@@ -50,7 +60,7 @@ class ChatViewScreen: UIView {
     
     lazy var inputMessageTextField: UITextField = {
         let element = UITextField()
-//        element.delegate = self
+        element.delegate = self
         element.translatesAutoresizingMaskIntoConstraints = false
         element.placeholder = "Digite aqui"
         element.font = UIFont(name: CustomFont.poppinsSemiBold, size: 14)
@@ -61,8 +71,8 @@ class ChatViewScreen: UIView {
     lazy var tableView: UITableView = {
         let element = UITableView()
         element.translatesAutoresizingMaskIntoConstraints = false
-//        element.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
-//        element.register(OutgoingTextMessageTableViewCell.self, forCellReuseIdentifier: OutgoingTextMessageTableViewCell.identifier)
+        element.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
+        element.register(OutgoingTextMessageTableViewCell.self, forCellReuseIdentifier: OutgoingTextMessageTableViewCell.identifier)
         element.backgroundColor = .clear
         element.transform = CGAffineTransform(scaleX: 1, y: -1)
         element.separatorStyle = .none
@@ -86,6 +96,7 @@ class ChatViewScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         self.addElemented()
         self.setupContraints()
         
@@ -177,30 +188,30 @@ class ChatViewScreen: UIView {
     @objc
     func sendButtonPressed(){
         self.sendButton.touchAnimation(s: self.sendButton)
-//        self.playSound()
-//        self.delegate?.actionPushMessage()
-//        self.startPushMessage()
+        self.playSound()
+        self.delegate?.actionPushMessage()
+        self.startPushMessage()
     }
     
-//    func playSound() {
-//        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return }
-//        do {
-//            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-//            try AVAudioSession.sharedInstance().setActive(true)
-//            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
-//            guard let player = self.player else { return }
-//            player.play()
-//        } catch let error {
-//            print(error.localizedDescription)
-//        }
-//    }
-//
-//    public func startPushMessage(){
-//        self.inputMessageTextField.text = ""
-//        self.sendBtn.isEnabled = false
-//        self.sendBtn.layer.opacity = 0.4
-//        self.sendBtn.transform = .init(scaleX: 0.8, y: 0.8)
-//    }
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "send", withExtension: "wav") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            self.player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            guard let player = self.player else { return }
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+
+    public func startPushMessage(){
+        self.inputMessageTextField.text = ""
+        self.sendButton.isEnabled = false
+        self.sendButton.layer.opacity = 0.4
+        self.sendButton.transform = .init(scaleX: 0.8, y: 0.8)
+    }
 }
 
 

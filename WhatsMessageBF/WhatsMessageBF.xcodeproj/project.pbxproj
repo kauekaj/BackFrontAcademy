@@ -27,6 +27,8 @@
 		969A0D00294C77D9009D262D /* MessageDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A0CFF294C77D9009D262D /* MessageDetailCollectionViewCell.swift */; };
 		969A0D03294C7D1E009D262D /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A0D02294C7D1E009D262D /* ContactController.swift */; };
 		969E7E84294BC953009A497E /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969E7E83294BC953009A497E /* MessageAllModel.swift */; };
+		96B42EBA295075A200EFEF55 /* IncomingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B42EB9295075A200EFEF55 /* IncomingTextMessageTableViewCell.swift */; };
+		96B42EBC295075B200EFEF55 /* OutgoingTextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B42EBB295075B200EFEF55 /* OutgoingTextMessageTableViewCell.swift */; };
 		96C900BA294A741200491495 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900B9294A741200491495 /* UIView+Extension.swift */; };
 		96C900BE294A752600491495 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900BD294A752600491495 /* CustomColor.swift */; };
 		96C900C0294A75CB00491495 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C900BF294A75CB00491495 /* CustomFont.swift */; };
@@ -64,6 +66,8 @@
 		969A0CFF294C77D9009D262D /* MessageDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		969A0D02294C7D1E009D262D /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		969E7E83294BC953009A497E /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
+		96B42EB9295075A200EFEF55 /* IncomingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
+		96B42EBB295075B200EFEF55 /* OutgoingTextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageTableViewCell.swift; sourceTree = "<group>"; };
 		96C900B9294A741200491495 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		96C900BD294A752600491495 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
 		96C900BF294A75CB00491495 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 		96982068294F9EAF00B813FA /* ChatViewController */ = {
 			isa = PBXGroup;
 			children = (
+				96B42EB82950757C00EFEF55 /* Cell */,
 				9698206E294FA03F00B813FA /* ChatNavigationView */,
 				9698206B294F9EFD00B813FA /* Screen */,
 				96982069294F9ED900B813FA /* ChatViewController.swift */,
@@ -299,6 +304,15 @@
 				969E7E83294BC953009A497E /* MessageAllModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		96B42EB82950757C00EFEF55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				96B42EB9295075A200EFEF55 /* IncomingTextMessageTableViewCell.swift */,
+				96B42EBB295075B200EFEF55 /* OutgoingTextMessageTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		96C900C1294A76D500491495 /* Fonts */ = {
@@ -450,6 +464,7 @@
 				9697F743294A42A8007E7E0B /* LoginViewController.swift in Sources */,
 				9697F726294A41BE007E7E0B /* AppDelegate.swift in Sources */,
 				9696DF5B294B5B77004C541C /* HomeScreen.swift in Sources */,
+				96B42EBA295075A200EFEF55 /* IncomingTextMessageTableViewCell.swift in Sources */,
 				96C900BE294A752600491495 /* CustomColor.swift in Sources */,
 				96C900C9294A77BD00491495 /* UIButton+Extension.swift in Sources */,
 				969A0D00294C77D9009D262D /* MessageDetailCollectionViewCell.swift in Sources */,
@@ -464,6 +479,7 @@
 				9697F745294A42A8007E7E0B /* RegisterViewController.swift in Sources */,
 				9697F728294A41BE007E7E0B /* SceneDelegate.swift in Sources */,
 				9697F744294A42A8007E7E0B /* LoginScreen.swift in Sources */,
+				96B42EBC295075B200EFEF55 /* OutgoingTextMessageTableViewCell.swift in Sources */,
 				9696DF58294B5B09004C541C /* HomeViewController.swift in Sources */,
 				9697F74A294A436F007E7E0B /* Alert.swift in Sources */,
 				9698206D294F9F2500B813FA /* ChatViewScreen.swift in Sources */,

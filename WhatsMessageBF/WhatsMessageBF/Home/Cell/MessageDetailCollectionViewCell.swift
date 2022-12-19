@@ -68,9 +68,9 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
     
     func setUserName(userName: String) {
         let attributedtext = NSMutableAttributedString(string: userName, attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.darkGray])
-        self.userName.attributedText = attributedtext
+//        self.userName.attributedText = attributedtext
         
-//        self.userName.text = userName
+        self.userName.text = userName
     }
     
     func setUserNameAttributedtext(_ conversation: Conversation) {
