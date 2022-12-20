@@ -73,16 +73,56 @@
 		9699451F29522D440023DAB0 /* SwiftArquiteturas */ = {
 			isa = PBXGroup;
 			children = (
+				96E73E07295233C700B2F35A /* Source */,
+				96E73E032952339900B2F35A /* API */,
+				9699452E29522D460023DAB0 /* Info.plist */,
+				9699453429522E730023DAB0 /* GoogleService-Info.plist */,
+			);
+			path = SwiftArquiteturas;
+			sourceTree = "<group>";
+		};
+		96E73E032952339900B2F35A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				96E73E06295233B600B2F35A /* Provider */,
+				96E73E05295233AE00B2F35A /* Manager */,
+				96E73E04295233A400B2F35A /* Business */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		96E73E04295233A400B2F35A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		96E73E05295233AE00B2F35A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		96E73E06295233B600B2F35A /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		96E73E07295233C700B2F35A /* Source */ = {
+			isa = PBXGroup;
+			children = (
 				9699452029522D440023DAB0 /* AppDelegate.swift */,
 				9699452229522D440023DAB0 /* SceneDelegate.swift */,
 				9699452429522D440023DAB0 /* ViewController.swift */,
 				9699452629522D440023DAB0 /* Main.storyboard */,
 				9699452929522D460023DAB0 /* Assets.xcassets */,
 				9699452B29522D460023DAB0 /* LaunchScreen.storyboard */,
-				9699452E29522D460023DAB0 /* Info.plist */,
-				9699453429522E730023DAB0 /* GoogleService-Info.plist */,
 			);
-			path = SwiftArquiteturas;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		B6A94605F9A528CD9F20FE4A /* Pods */ = {
@@ -91,7 +131,6 @@
 				5AAF142371C7112E37583968 /* Pods-SwiftArquiteturas.debug.xcconfig */,
 				D911F143FC3F0BF010B27B22 /* Pods-SwiftArquiteturas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
