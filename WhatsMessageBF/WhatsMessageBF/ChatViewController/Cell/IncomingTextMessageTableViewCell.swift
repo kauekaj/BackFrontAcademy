@@ -24,8 +24,8 @@ class IncomingTextMessageTableViewCell: UITableViewCell {
     
     lazy var messageTextLabel: UILabel = {
         let element = UILabel()
-        element.numberOfLines = 0
         element.translatesAutoresizingMaskIntoConstraints = false
+        element.numberOfLines = 0
         element.textColor = .darkGray
         element.font = UIFont(name: CustomFont.poppinsMedium, size: 14)
         return element

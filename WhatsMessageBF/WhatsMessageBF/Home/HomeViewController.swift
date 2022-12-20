@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
         self.configIdentifierFirebase()
         self.configContact()
         self.addListenerGetConversation()
+        print(conversationList)
     }
 
     private func configHomeView() {
@@ -94,7 +95,7 @@ class HomeViewController: UIViewController {
     func addListenerGetConversation() {
 
         if let loggedUserID = auth?.currentUser?.uid {
-            self.conversationListener = db?.collection("conversation").document(loggedUserID).collection("last-conversation").addSnapshotListener({ querySnapshot, error in
+            self.conversationListener = db?.collection("conversation").document(loggedUserID).collection("lastConversation").addSnapshotListener({ querySnapshot, error in
 
                 if error == nil {
 

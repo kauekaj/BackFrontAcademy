@@ -79,6 +79,7 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
         attributedtext.append(NSAttributedString(string: "\n\(conversation.lastMessage ?? "")", attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 14) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray]))
         
         self.userName.attributedText = attributedtext
+        
     }
     
    

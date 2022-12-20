@@ -114,6 +114,7 @@ class NavigationView: UIView {
         super.init(frame: frame)
         setupView()
         setupConstraints()
+        
     }
     
     required init?(coder: NSCoder) {
