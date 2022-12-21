@@ -13,7 +13,7 @@ class Message {
     
     init(dictionary: [String : Any]) {
         self.text = dictionary["text"] as? String
-        self.userID = dictionary["userID"] as? String
+        self.userID = dictionary["IDUser"] as? String
     }
 }
 

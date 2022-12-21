@@ -137,6 +137,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if self.screenContact ?? false {
             return self.contactList.count + 1
         } else {
+            print(conversationList.count)
+
             return self.conversationList.count
         }
     }
@@ -169,6 +171,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 })
             } else {
                 let VC: ChatViewController = ChatViewController()
+                VC.contact = self.contactList[indexPath.row]
                 self.navigationController?.pushViewController(VC, animated: true)
             }
         }

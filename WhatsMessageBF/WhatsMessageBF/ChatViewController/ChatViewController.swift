@@ -62,7 +62,7 @@ class ChatViewController: UIViewController {
         }
     }
     
-    private func configDataFirebase(){
+    private func configDataFirebase() {
         self.auth = Auth.auth()
         self.db = Firestore.firestore()
         
@@ -160,17 +160,17 @@ extension ChatViewController: ChatViewScreenProtocol{
         
         if let recipientID = contact?.id {
             
-            let message: Dictionary<String,Any> = [
-                "userID" : self.loggedUserID ?? "",
+            let msg: Dictionary<String,Any> = [
+                "IDUser" : self.loggedUserID ?? "",
                 "text" : message,
                 "date" : FieldValue.serverTimestamp()
             ]
             
             //mensagem para remetente
-            self.saveMessage(senderID: self.loggedUserID ?? "", recipientID: recipientID, message: message)
+            self.saveMessage(senderID: self.loggedUserID ?? "", recipientID: recipientID, message: msg)
             
             //salvar mensagem para destinario
-            self.saveMessage(senderID: recipientID, recipientID: self.loggedUserID ?? "", message: message)
+            self.saveMessage(senderID: recipientID, recipientID: self.loggedUserID ?? "", message: msg)
             
             var conversation: Dictionary<String,Any> = [
                 "lastMessage" : message
@@ -186,10 +186,7 @@ extension ChatViewController: ChatViewScreenProtocol{
             conversation["senderID"] = recipientID
             conversation["recipientID"] = loggedUserID ?? ""
             conversation["userName"] = self.contactName ?? ""
-            self.saveMessage(senderID: recipientID, recipientID: loggedUserID ?? "", message: conversation)
-            
+            self.saveConversation(senderID: recipientID, recipientID: loggedUserID ?? "", conversation: conversation)
         }
-        
     }
-    
 }
