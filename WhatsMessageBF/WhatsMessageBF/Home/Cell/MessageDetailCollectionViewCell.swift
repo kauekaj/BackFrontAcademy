@@ -77,7 +77,8 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
         let attributedtext = NSMutableAttributedString(string: "\(conversation.userName ?? "")", attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.darkGray])
         
         attributedtext.append(NSAttributedString(string: "\n\(conversation.lastMessage ?? "")", attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 14) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray]))
-        self.userName.text = "XYZ"
+        
+        self.userName.text = "XYZ\n\(conversation.lastMessage ?? "")" //teste para visualizar texto
 //        self.userName.attributedText = attributedtext
         
     }

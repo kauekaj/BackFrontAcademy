@@ -174,6 +174,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 VC.contact = self.contactList[indexPath.row]
                 self.navigationController?.pushViewController(VC, animated: true)
             }
+        } else {
+            let VC: ChatViewController = ChatViewController()
+            let data = self.conversationList[indexPath.row]
+            let contact: Contact = Contact(id: data.recipientID ?? "", name: data.userName ?? "")
+            VC.contact = contact
+            self.navigationController?.pushViewController(VC, animated: true)
         }
     }
 

@@ -16,7 +16,7 @@ class ChatViewScreen: UIView {
     
     weak private var delegate: ChatViewScreenProtocol?
     
-    public func delegate(delegate:ChatViewScreenProtocol?){
+    public func delegate(delegate: ChatViewScreenProtocol?){
         self.delegate = delegate
     }
     
@@ -100,8 +100,8 @@ class ChatViewScreen: UIView {
         self.addElemented()
         self.setupContraints()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleKeyboardNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleKeyboardNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleKeyboardNotification(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleKeyboardNotification(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         self.inputMessageTextField.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
         
