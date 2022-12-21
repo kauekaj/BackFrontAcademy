@@ -11,6 +11,7 @@
 		969529182953BE32000E5431 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969529172953BE32000E5431 /* UserProvider.swift */; };
 		9695291B2953BE90000E5431 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695291A2953BE90000E5431 /* UserModel.swift */; };
 		9695291E2953C22A000E5431 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695291D2953C22A000E5431 /* Constants.swift */; };
+		969529202953C501000E5431 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695291F2953C501000E5431 /* UserBusiness.swift */; };
 		9699452129522D440023DAB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452029522D440023DAB0 /* AppDelegate.swift */; };
 		9699452329522D440023DAB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452229522D440023DAB0 /* SceneDelegate.swift */; };
 		9699452529522D440023DAB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452429522D440023DAB0 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		969529172953BE32000E5431 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		9695291A2953BE90000E5431 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9695291D2953C22A000E5431 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9695291F2953C501000E5431 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		9699451D29522D440023DAB0 /* SwiftArquiteturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftArquiteturas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9699452029522D440023DAB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9699452229522D440023DAB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		96E73E04295233A400B2F35A /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				9695291F2953C501000E5431 /* UserBusiness.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				9695291B2953BE90000E5431 /* UserModel.swift in Sources */,
 				969529182953BE32000E5431 /* UserProvider.swift in Sources */,
 				9695291E2953C22A000E5431 /* Constants.swift in Sources */,
+				969529202953C501000E5431 /* UserBusiness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
