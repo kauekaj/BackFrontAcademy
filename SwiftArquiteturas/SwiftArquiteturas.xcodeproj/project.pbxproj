@@ -20,7 +20,18 @@
 		9699452D29522D460023DAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9699452B29522D460023DAB0 /* LaunchScreen.storyboard */; };
 		9699453529522E730023DAB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9699453429522E730023DAB0 /* GoogleService-Info.plist */; };
 		969A97602954C9FD00C5E3DA /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A975F2954C9FD00C5E3DA /* UserManager.swift */; };
+		969A97682954CF4500C5E3DA /* SwiftArquiteturasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969A97672954CF4500C5E3DA /* SwiftArquiteturasTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		969A97692954CF4500C5E3DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9699451529522D440023DAB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9699451C29522D440023DAB0;
+			remoteInfo = SwiftArquiteturas;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5AAF142371C7112E37583968 /* Pods-SwiftArquiteturas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftArquiteturas.debug.xcconfig"; path = "Target Support Files/Pods-SwiftArquiteturas/Pods-SwiftArquiteturas.debug.xcconfig"; sourceTree = "<group>"; };
@@ -39,6 +50,8 @@
 		9699452E29522D460023DAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9699453429522E730023DAB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		969A975F2954C9FD00C5E3DA /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		969A97652954CF4500C5E3DA /* SwiftArquiteturasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftArquiteturasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		969A97672954CF4500C5E3DA /* SwiftArquiteturasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftArquiteturasTests.swift; sourceTree = "<group>"; };
 		D911F143FC3F0BF010B27B22 /* Pods-SwiftArquiteturas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftArquiteturas.release.xcconfig"; path = "Target Support Files/Pods-SwiftArquiteturas/Pods-SwiftArquiteturas.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +61,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B5604102FEE083D653EB3A /* Pods_SwiftArquiteturas.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969A97622954CF4500C5E3DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9699451F29522D440023DAB0 /* SwiftArquiteturas */,
+				969A97662954CF4500C5E3DA /* SwiftArquiteturasTests */,
 				9699451E29522D440023DAB0 /* Products */,
 				B6A94605F9A528CD9F20FE4A /* Pods */,
 				4C32427604305C6288A27DF7 /* Frameworks */,
@@ -92,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				9699451D29522D440023DAB0 /* SwiftArquiteturas.app */,
+				969A97652954CF4500C5E3DA /* SwiftArquiteturasTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +128,14 @@
 				9699453429522E730023DAB0 /* GoogleService-Info.plist */,
 			);
 			path = SwiftArquiteturas;
+			sourceTree = "<group>";
+		};
+		969A97662954CF4500C5E3DA /* SwiftArquiteturasTests */ = {
+			isa = PBXGroup;
+			children = (
+				969A97672954CF4500C5E3DA /* SwiftArquiteturasTests.swift */,
+			);
+			path = SwiftArquiteturasTests;
 			sourceTree = "<group>";
 		};
 		96E73E032952339900B2F35A /* API */ = {
@@ -187,6 +217,24 @@
 			productReference = 9699451D29522D440023DAB0 /* SwiftArquiteturas.app */;
 			productType = "com.apple.product-type.application";
 		};
+		969A97642954CF4500C5E3DA /* SwiftArquiteturasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 969A976B2954CF4600C5E3DA /* Build configuration list for PBXNativeTarget "SwiftArquiteturasTests" */;
+			buildPhases = (
+				969A97612954CF4500C5E3DA /* Sources */,
+				969A97622954CF4500C5E3DA /* Frameworks */,
+				969A97632954CF4500C5E3DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				969A976A2954CF4500C5E3DA /* PBXTargetDependency */,
+			);
+			name = SwiftArquiteturasTests;
+			productName = SwiftArquiteturasTests;
+			productReference = 969A97652954CF4500C5E3DA /* SwiftArquiteturasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,6 +247,10 @@
 				TargetAttributes = {
 					9699451C29522D440023DAB0 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					969A97642954CF4500C5E3DA = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 9699451C29522D440023DAB0;
 					};
 				};
 			};
@@ -216,6 +268,7 @@
 			projectRoot = "";
 			targets = (
 				9699451C29522D440023DAB0 /* SwiftArquiteturas */,
+				969A97642954CF4500C5E3DA /* SwiftArquiteturasTests */,
 			);
 		};
 /* End PBXProject section */
@@ -229,6 +282,13 @@
 				9699452A29522D460023DAB0 /* Assets.xcassets in Resources */,
 				9699452829522D440023DAB0 /* Main.storyboard in Resources */,
 				9699453529522E730023DAB0 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		969A97632954CF4500C5E3DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +352,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		969A97612954CF4500C5E3DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969A97682954CF4500C5E3DA /* SwiftArquiteturasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		969A976A2954CF4500C5E3DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9699451C29522D440023DAB0 /* SwiftArquiteturas */;
+			targetProxy = 969A97692954CF4500C5E3DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9699452629522D440023DAB0 /* Main.storyboard */ = {
@@ -486,6 +562,42 @@
 			};
 			name = Release;
 		};
+		969A976C2954CF4600C5E3DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7W6HJZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kauekaj.SwiftArquiteturasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftArquiteturas.app/SwiftArquiteturas";
+			};
+			name = Debug;
+		};
+		969A976D2954CF4600C5E3DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7W6HJZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kauekaj.SwiftArquiteturasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftArquiteturas.app/SwiftArquiteturas";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -503,6 +615,15 @@
 			buildConfigurations = (
 				9699453229522D460023DAB0 /* Debug */,
 				9699453329522D460023DAB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		969A976B2954CF4600C5E3DA /* Build configuration list for PBXNativeTarget "SwiftArquiteturasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969A976C2954CF4600C5E3DA /* Debug */,
+				969A976D2954CF4600C5E3DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
