@@ -12,9 +12,11 @@
 		9695291B2953BE90000E5431 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695291A2953BE90000E5431 /* UserModel.swift */; };
 		9695291E2953C22A000E5431 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695291D2953C22A000E5431 /* Constants.swift */; };
 		969529202953C501000E5431 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695291F2953C501000E5431 /* UserBusiness.swift */; };
+		96965E8D2955075A0044D004 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96965E8C2955075A0044D004 /* LoginViewController.swift */; };
+		96965E8F29550EF00044D004 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96965E8E29550EF00044D004 /* RegisterViewController.swift */; };
 		9699452129522D440023DAB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452029522D440023DAB0 /* AppDelegate.swift */; };
 		9699452329522D440023DAB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452229522D440023DAB0 /* SceneDelegate.swift */; };
-		9699452529522D440023DAB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452429522D440023DAB0 /* ViewController.swift */; };
+		9699452529522D440023DAB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699452429522D440023DAB0 /* HomeViewController.swift */; };
 		9699452829522D440023DAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9699452629522D440023DAB0 /* Main.storyboard */; };
 		9699452A29522D460023DAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9699452929522D460023DAB0 /* Assets.xcassets */; };
 		9699452D29522D460023DAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9699452B29522D460023DAB0 /* LaunchScreen.storyboard */; };
@@ -40,10 +42,12 @@
 		9695291A2953BE90000E5431 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9695291D2953C22A000E5431 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9695291F2953C501000E5431 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
+		96965E8C2955075A0044D004 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		96965E8E29550EF00044D004 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9699451D29522D440023DAB0 /* SwiftArquiteturas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftArquiteturas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9699452029522D440023DAB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9699452229522D440023DAB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9699452429522D440023DAB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9699452429522D440023DAB0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9699452729522D440023DAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9699452929522D460023DAB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9699452C29522D460023DAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +102,16 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		96965E8A2955072D0044D004 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9699452429522D440023DAB0 /* HomeViewController.swift */,
+				96965E8C2955075A0044D004 /* LoginViewController.swift */,
+				96965E8E29550EF00044D004 /* RegisterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		9699451429522D440023DAB0 = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +135,10 @@
 		9699451F29522D440023DAB0 /* SwiftArquiteturas */ = {
 			isa = PBXGroup;
 			children = (
-				9695291C2953C20F000E5431 /* Infrastructure */,
+				96965E8A2955072D0044D004 /* Controllers */,
 				96E73E07295233C700B2F35A /* Source */,
 				96E73E032952339900B2F35A /* API */,
+				9695291C2953C20F000E5431 /* Infrastructure */,
 				9699452E29522D460023DAB0 /* Info.plist */,
 				9699453429522E730023DAB0 /* GoogleService-Info.plist */,
 			);
@@ -178,7 +193,6 @@
 			children = (
 				9699452029522D440023DAB0 /* AppDelegate.swift */,
 				9699452229522D440023DAB0 /* SceneDelegate.swift */,
-				9699452429522D440023DAB0 /* ViewController.swift */,
 				9699452629522D440023DAB0 /* Main.storyboard */,
 				9699452929522D460023DAB0 /* Assets.xcassets */,
 				9699452B29522D460023DAB0 /* LaunchScreen.storyboard */,
@@ -341,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9699452529522D440023DAB0 /* ViewController.swift in Sources */,
+				96965E8D2955075A0044D004 /* LoginViewController.swift in Sources */,
+				96965E8F29550EF00044D004 /* RegisterViewController.swift in Sources */,
+				9699452529522D440023DAB0 /* HomeViewController.swift in Sources */,
 				9699452129522D440023DAB0 /* AppDelegate.swift in Sources */,
 				9699452329522D440023DAB0 /* SceneDelegate.swift in Sources */,
 				9695291B2953BE90000E5431 /* UserModel.swift in Sources */,

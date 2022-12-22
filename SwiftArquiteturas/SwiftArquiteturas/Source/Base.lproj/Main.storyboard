@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="98u-Fv-OTe">
             <objects>
-                <viewController id="CQT-6y-DOA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CQT-6y-DOA" customClass="RegisterViewController" customModule="SwiftArquiteturas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XjK-ay-FX3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,9 @@
                                 <color key="tintColor" red="0.0" green="0.59607843140000005" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="CQT-6y-DOA" eventType="touchUpInside" id="Evo-xV-j5Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRh-1B-6Sb">
                                 <rect key="frame" x="39" y="505" width="337" height="40"/>
@@ -64,6 +67,9 @@
                                 <color key="tintColor" red="0.0" green="0.59607843140000005" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="CQT-6y-DOA" eventType="touchUpInside" id="lz3-8I-qFd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrg-QH-snq">
                                 <rect key="frame" x="39" y="321" width="126" height="21"/>
@@ -109,6 +115,11 @@
                             <constraint firstItem="XZa-Up-yN4" firstAttribute="top" secondItem="tHX-cE-V4H" secondAttribute="top" constant="101" id="yuZ-uR-qW8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="Nmm-0G-7j3" id="AVN-eU-E8s"/>
+                        <outlet property="emailTextField" destination="XZz-16-3Yc" id="Lcx-4c-e7J"/>
+                        <outlet property="passwordTextField" destination="mlF-68-yAn" id="C7i-CH-Yal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xx-0y-laB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

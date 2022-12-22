@@ -49,6 +49,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: Any) {
-        
+        self.openRegisterView()
+    }
+    
+    func openRegisterView() {
+        let homeView = self.storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        homeView.modalPresentationStyle = .fullScreen
+        self.present(homeView, animated: true)
     }
 }
