@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    let presenter: RegisterPresenter = RegisterPresenter()
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,6 +18,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.delegate = self
     }
     
     
@@ -29,33 +32,19 @@ class RegisterViewController: UIViewController {
         
         if let email = emailTextField.text,
            let password = passwordTextField.text,
-           let confirmPassword = confirmPasswordTextField.text {
+           password == confirmPasswordTextField.text {
             
-            if password != confirmPassword {
-                self.showMessage(title: "Erro", message: "As senhas não conferem")
-                return
-                
-            }
+            let userModel = UserModel(email: email, password: password)
             
-            
-            let manager = UserManager(business: UserBusiness())
-            
-            manager.register(email: email,
-                             password: password) { userModel in
-                self.openHomeView()
-            } failureHandler: { error in
-                self.showMessage(title: "Erro", message: error?.localizedDescription ?? "")
-            }
+            presenter.register(userModel: userModel)
+        } else {
+            showMessage(title: "Error", message: "Senhas não conferem")
         }
-        
     }
     
-    func openHomeView() {
-        let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        homeView.modalPresentationStyle = .fullScreen
-        self.present(homeView, animated: true)
-    }
-    
+}
+
+extension RegisterViewController: RegisterPresenterDelegate {
     func showMessage(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -63,4 +52,12 @@ class RegisterViewController: UIViewController {
         
         self.present(alert, animated: true)
     }
+    
+    func goHome() {
+        let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        homeView.modalPresentationStyle = .fullScreen
+        self.present(homeView, animated: true)
+    }
+    
+    
 }
