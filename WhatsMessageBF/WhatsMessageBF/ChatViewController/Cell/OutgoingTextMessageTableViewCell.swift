@@ -25,7 +25,7 @@ class OutgoingTextMessageTableViewCell: UITableViewCell {
         element.translatesAutoresizingMaskIntoConstraints = false
         element.numberOfLines = 0
         element.textColor = .white
-        element.font = UIFont(name: CustomFont.poppinsSemiBold, size: 14)
+        element.font = UIFont.systemFont(ofSize: 14) //UIFont(name: CustomFont.poppinsSemiBold, size: 14)
         return element
     }()
     

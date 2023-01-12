@@ -57,7 +57,7 @@ class NavigationView: UIView {
         let element = UILabel()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.text = "Digite aqui"
-        element.font = UIFont(name: CustomFont.poppinsMedium, size: 16)
+        element.font = UIFont(name: CustomFont.poppinsMedium, size: 26)
         element.textColor = .lightGray
         return element
     }()

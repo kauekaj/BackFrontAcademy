@@ -25,7 +25,7 @@ class LastMessageCollectionViewCell: UICollectionViewCell {
         let element = UILabel()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.text = "Adicionar novo contato"
-        element.font = UIFont(name: CustomFont.poppinsMedium, size: 16)
+        element.font = UIFont(name: CustomFont.poppinsMedium, size: 20)
         element.textColor = .darkGray
         element.numberOfLines = 2
         return element
