@@ -63,7 +63,7 @@ class ChatViewScreen: UIView {
         element.delegate = self
         element.translatesAutoresizingMaskIntoConstraints = false
         element.placeholder = "Digite aqui"
-        element.font = UIFont(name: CustomFont.poppinsSemiBold, size: 14)
+        element.font = UIFont.systemFont(ofSize: 14) //UIFont(name: CustomFont.poppinsSemiBold, size: 14)
         element.textColor = .darkGray
         return element
     }()

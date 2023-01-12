@@ -27,7 +27,7 @@ class IncomingTextMessageTableViewCell: UITableViewCell {
         element.translatesAutoresizingMaskIntoConstraints = false
         element.numberOfLines = 0
         element.textColor = .darkGray
-        element.font = UIFont(name: CustomFont.poppinsMedium, size: 14)
+        element.font = UIFont.systemFont(ofSize: 14) //UIFont(name: CustomFont.poppinsMedium, size: 24)
         return element
     }()
     

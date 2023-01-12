@@ -67,19 +67,27 @@ class MessageDetailCollectionViewCell: UICollectionViewCell {
     }
     
     func setUserName(userName: String) {
-        let attributedtext = NSMutableAttributedString(string: userName, attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.darkGray])
-//        self.userName.attributedText = attributedtext
+//        guard let font = UIFont(name: CustomFont.poppinsMedium, size: 16) else { return }
+        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.darkGray, .font: UIFont.systemFont(ofSize: 16)]
         
-        self.userName.text = userName
+        let attributedtext = NSMutableAttributedString(string: userName,
+                                                       attributes: attributes)
+        self.userName.attributedText = attributedtext
+        
+//        self.userName.text = userName
     }
     
     func setUserNameAttributedtext(_ conversation: Conversation) {
-        let attributedtext = NSMutableAttributedString(string: "\(conversation.userName ?? "")", attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 16) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.darkGray])
+//        guard let font = UIFont(name: CustomFont.poppinsMedium, size: 16) else { return }
         
-        attributedtext.append(NSAttributedString(string: "\n\(conversation.lastMessage ?? "")", attributes: [NSAttributedString.Key.font: UIFont(name: CustomFont.poppinsMedium, size: 14) ?? UIFont(), NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray]))
+//        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.darkGray, .font: UIFont.systemFont(ofSize: 14) ]
         
-        self.userName.text = "XYZ\n\(conversation.lastMessage ?? "")" //teste para visualizar texto
-//        self.userName.attributedText = attributedtext
+        let attributedtext = NSMutableAttributedString(string: "\(conversation.userName ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16) , NSMutableAttributedString.Key.foregroundColor: UIColor.darkGray])
+        
+        attributedtext.append(NSAttributedString(string: "\n\(conversation.lastMessage ?? "")", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14) , NSMutableAttributedString.Key.foregroundColor: UIColor.lightGray]))
+        
+//        self.userName.text = "XYZ\n\(conversation.lastMessage ?? "")" //teste para visualizar texto
+        self.userName.attributedText = attributedtext
         
     }
     
